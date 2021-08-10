@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Akıllı Harca - Web Kazıma 0.07</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600"
+    />
+
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+
+  <body>
+    <!-- page header -->
+    <div class="container" id="home">
+      <div class="col-12 text-center">
+        <div class="tm-page-header">
+          <i class="fas fa-4x fa-chart-bar mr-4"></i>
+          <h1 class="d-inline-block text-uppercase">Fiyat Karşılaştır</h1>
+        </div>
+      </div>
+    </div>
+
+    <section class="tm-banner-section" id="tmVideoSection">
+      <div class="container tm-banner-text-container">
+        <div class="row">
+          <div class="col-12">
+            <header>
+              <h4>Aradığınız ürünü yazabilirsiniz.</h4>
+              <style>
+                body {
+                  font-family: Arial;
+                }
+
+                * {
+                  box-sizing: border-box;
+                }
+
+                form.example input[type=text] {
+                  padding: 10px;
+                  font-size: 17px;
+                  border: 1px solid grey;
+                  float: left;
+                  width: 80%;
+                  background: #f1f1f1;
+                }
+
+                form.example button {
+                  float: left;
+                  width: 20%;
+                  padding: 10px;
+                  background: #2196F3;
+                  color: white;
+                  font-size: 17px;
+                  border: 1px solid grey;
+                  border-left: none;
+                  cursor: pointer;
+                }
+
+                form.example button:hover {
+                  background: #0b7dda;
+                }
+
+                form.example::after {
+                  content: "";
+                  clear: both;
+                  display: table;
+                }
+                </style>
+              <form class="example" method="POST" action="results/" style="margin:auto;max-width:400px">{% csrf_token %}
+                <input type="text" placeholder="Ara.." name="textfield">
+                <button type="submit"><i class="fa fa-search"></i></button>
+              </form>
+            </header>
+          </div>
+        </div>
+      </div>
+    <!-- Activities -->
+    <div class="container" id="activities">
+      
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="tm-activity-block">
+            <div class="tm-activity-block-text">
+              <h3 class="tm-text-blue">Django Framework</h3>
+              <p>
+                Websitesi ve altyapı için Python-Django Framework'ünü kullandım.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="tm-activity-block mr-lg-0 ml-lg-auto">
+            <div class="tm-activity-block-text">
+              <h3 class="tm-text-blue">Beautiful Soup</h3>
+              <p>
+                Websitelerinden fiyatları çekmek için Beautiful Soup 4'ü kullandım.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="tm-activity-block">
+            <div class="tm-activity-block-text">
+              <h3 class="tm-text-blue">Selenium</h3>
+              <p>
+                Hali hazırda bir server'ım olmadığından, local olarak çalıştıracağım için. Beautfiul Soup'un tarayıcı ihtiyacını
+                selenium ile giderdim.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="tm-activity-block mr-lg-0 ml-lg-auto">
+            <div class="tm-activity-block-text">
+              <h3 class="tm-text-blue">Pandas</h3>
+              <p>
+                Verileri kaydetmek ve dosya işlemleri için pandas'ı kullandım. Veriler .CSV dosyasına tablo olarak kaydediliyor.
+                İstediğimiz takdirde .json olarak da kaydedebiliyoruz.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
